@@ -1,13 +1,17 @@
 
 Ident() 
 {
+    let resultado = "";
     //identificar si es mayor o menor de edad
     let edad = prompt("Por favor ingrese edad: ");
 
     if(edad >= 18){
-        alert(`es mayor de edad: ${edad}`)
+        resultado = `Es mayor de edad - tiene: <h2>${edad}</h2>`
     }
+
     else{
-        alert("es menor de edad")
+        resultado = `Es menor de edad - tiene : <h2>${edad}</h2>`
     }
+    document.getElementById('lista').innerHTML = resultado;
+    
 }
