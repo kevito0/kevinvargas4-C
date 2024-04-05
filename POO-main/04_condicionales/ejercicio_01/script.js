@@ -1,5 +1,5 @@
 
-Ident() 
+function Ident() 
 {
     let resultado = "";
 
