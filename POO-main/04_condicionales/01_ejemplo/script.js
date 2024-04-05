@@ -1,6 +1,6 @@
 
-Ident() 
-{
+function Ident() {
+    
     let resultado = "";
     //identificar si es mayor o menor de edad
     let edad = prompt("Por favor ingrese edad: ");
