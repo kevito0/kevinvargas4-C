@@ -6,12 +6,14 @@ function Ident()
     let num1 = prompt("Por favor ingrese numero: ");
     let num2 = prompt("Por favor ingrese numero: ");
 
-    if(num1 >= num2){
+    if(num1 > num2){
         resultado = `El mayor es: <h2>${num1}</h2>`
     }
-
+    else if (num2 > num1){
+        resultado = `El mayor es: <h2>${num2}</h2>`
+    }
     else{
-        resultado = `El mayor es : <h2>${num2}</h2>`
+        resultado = `Los dos valores son<h2>${num2}</h2> `
     }
     document.getElementById('lista').innerHTML = resultado;
     
