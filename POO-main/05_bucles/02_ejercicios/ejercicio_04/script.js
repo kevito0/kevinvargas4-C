@@ -6,5 +6,11 @@ function numeroMayor() {
         numeros.push(numero);
     }
 
-    document.getElementById('resultado').innerHTML = `El número mayor es: ${numeros}`;
+    let mayor = numeros[0];
+    for (let i = 1; i < numeros.length; i++) {
+        if (numeros[i] > mayor) {
+            mayor = numeros[i];
+        }
+    document.getElementById('lista').innerHTML = `Los numeros ingresados son: <h2>${numeros}</h2> \n y el mayor es <h2>${mayor}</h2>`;
+    }
 }
