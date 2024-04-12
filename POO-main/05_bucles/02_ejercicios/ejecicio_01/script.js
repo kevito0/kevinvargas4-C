@@ -1,4 +1,4 @@
-function contarWhile(){
+function increment(){
     let contador = 0;
     let array = [];
 
