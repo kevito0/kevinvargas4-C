@@ -9,5 +9,5 @@ function numerosPares() {
         }
     }
 
-    document.getElementById('lista').innerHTML = `Los ${N} primeros números pares son: <h2>${numerosPares}</h2>`;
+    document.getElementById('lista').innerHTML = `Los ${N} primeros números pares son: \n<h2>${numerosPares}</h2>`;
 }
