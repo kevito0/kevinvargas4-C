@@ -1,7 +1,7 @@
 
 function calcularSuma() {
     let suma = 0;
-    let contador = 0;
+    let contador = 1;
     let array = [];
 
     while (contador <= 10) {
