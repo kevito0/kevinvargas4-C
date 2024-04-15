@@ -9,5 +9,5 @@ function calcularSuma() {
         suma += contador;
         contador++;
     }
-    document.getElementById('resultado').innerHTML = `La suma del 1 al 10 es: <h2>${array} = ${suma}</h2>`;
+    document.getElementById('resultado').innerHTML = `La suma del 1 al 10 es: <h2>${array.join("+")} = ${suma}</h2>`;
 }
