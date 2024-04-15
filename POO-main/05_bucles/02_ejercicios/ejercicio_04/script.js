@@ -11,6 +11,8 @@ function numeroMayor() {
         if (numeros[i] > mayor) {
             mayor = numeros[i];
         }
-    document.getElementById('lista').innerHTML = `Los numeros ingresados son: <h2>${numeros}</h2> \n y el mayor es <h2>${mayor}</h2>`;
+        //forma alternativa de if y else
+        // mayor = (mayor < numeros) ? numeros : mayor; 
+    document.getElementById('lista').innerHTML = `Los numeros ingresados son: <h2>${numeros}</h2> \n El numero mayor es: <h2>${mayor}</h2>`;
     }
 }
