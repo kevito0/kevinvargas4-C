@@ -1,4 +1,18 @@
 
-.contenedorcarusel {
-margin-left: rem 1;
+#navbar {
+    background-color: #20c997;
+
+}
+
+.carousel-inner img {
+    border-radius: 12px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.carousel-inner img:hover {
+    filter: brightness(80%);
+}
+
+.contenedor {
+    margin: 4rem;
 }
