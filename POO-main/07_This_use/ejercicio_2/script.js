@@ -20,6 +20,6 @@ function applyDiscount(button) {
     let productCard = button.parentElement;
     let priceElement = productCard.querySelector('.price');
     let currentPrice = parseFloat(priceElement.textContent.replace('$', ''));
-    let newPrice = (currentPrice * 0.9).toFixed(2);
+    let newPrice = (currentPrice * 0.4).toFixed(2);
     priceElement.textContent = `$${newPrice}`;
 }
