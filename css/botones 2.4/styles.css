@@ -1,9 +1,9 @@
 .button-search {
     padding: 10px 20px;
-    border: 2px solid #1ca5b8;
+    border: 2px solid #198d9c;
     border-radius: 20px;
     background-color: white;
-    color: #1ca5b8;
+    color: #198d9c;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -12,7 +12,7 @@
 .button-plus {
     width: 40px;
     height: 40px;
-    background-color: #52d0b2;
+    background-color: #3dc0a2;
     border: none;
     border-radius: 50%;
     color: white;
@@ -27,7 +27,7 @@
 
 .button-create-account {
     padding: 10px 20px;
-    background-color: #1e5ce6;
+    background-color: #1055e9;
     border: none;
     color: white;
     font-size: 16px;
