@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('video');
+    const mainVideo = document.getElementById('video');
+    const smallVideos = document.querySelectorAll('.vid-s');
 
-    const playVideo = () => {
-        video.play().catch(error => {
-            console.error("Error playing video:", error);
-        });
-    };
+    // Función para intercambiar videos
+    function swapVideos(smallVideo) {
+        // Guardar temporalmente la fuente del video principal
+        const mainVideoSrc = mainVideo.querySelector('source').src;
 
-    const pauseVideo = () => {
-        video.pause();
-    };
+        // Cambiar la fuente del video principal por la del video pequeño
+        mainVideo.querySelector('source').src = smallVideo.querySelector('source').src;
+        
+        // Cambiar la fuente del video pequeño por la del video principal
+        smallVideo.querySelector('source').src = mainVideoSrc;
 
-    const videoContainer = document.querySelector('.col-l');
+        // Recargar los videos para aplicar los cambios
+        mainVideo.load();
+        smallVideo.load();
 
-    if (videoContainer) {
-        videoContainer.addEventListener('mouseenter', playVideo);
-        videoContainer.addEventListener('mouseleave', pauseVideo);
-    } else {
-        console.error("Video container not found.");
+        // Reproducir el video principal después de intercambiar
+        mainVideo.play();
     }
+
+    // Agregar evento para que al pasar el cursor se intercambien los videos
+    smallVideos.forEach(video => {
+        video.addEventListener('mouseenter', () => swapVideos(video));
+    });
 });
