@@ -1,33 +1,33 @@
 let Ahora = "";
 let Operatoria = "";
 let Antes = "";
-let Borron = false; // Nueva variable para controlar si se mostró el resultado
+let Borron = false;
 
-
+// Detecta y maneja el tipo de tecla presionada
 function PresionarTecla(event) {
   const key = event.key;
-
-  if (!isNaN(key) || key === ".") { // Si es número o punto decimal
+  if (!isNaN(key) || key === ".") {
     press(key);
-  } else if (key === "+" || key === "-" || key === "*" || key === "/") { // Operadores
+  } else if (key === "+" || key === "-" || key === "*" || key === "/") {
     setOP(key);
-  } else if (key === "Enter" || key === "=") { // Enter o igual para calcular
+  } else if (key === "Enter" || key === "=") {
     calcular();
-  } else if (key === "Backspace" || key === "C") { // Backspace o 'C' para limpiar
+  } else if (key === "Backspace" || key === "C") {
     clr();
   }
 }
 
+// Gestiona la entrada de números y actualiza la pantalla
 function press(num) {
   if (Borron) {
-    // Si se mostró un resultado previamente, reiniciar la entrada actual
     Ahora = "";
-    Borron = false; // Reiniciar el estado
+    Borron = false;
   }
   Ahora += num;
   updateDisplay(Ahora);
 }
 
+// Guarda el operador y el número actual para realizar el cálculo
 function setOP(op) {
   if (Ahora === "") return;
   if (Antes !== "") {
@@ -38,6 +38,7 @@ function setOP(op) {
   Ahora = "";
 }
 
+// Realiza el cálculo y muestra el resultado en la pantalla
 function calcular() {
   if (Ahora === "" || Antes === "" || Operatoria === "") return;
   
@@ -61,17 +62,19 @@ function calcular() {
   Ahora = result;
   Antes = "";
   Operatoria = "";
-  Borron = true; // Indicar que se mostró un resultado
+  Borron = true;
 }
 
+// Resetea todos los valores y limpia la pantalla
 function clr() {
   Ahora = "";
   Antes = "";
   Operatoria = "";
   updateDisplay(0);
-  Borron = false; // Reiniciar el estado
+  Borron = false;
 }
 
+// Actualiza el valor mostrado en la pantalla
 function updateDisplay(value) {
   document.getElementById("display").innerText = value;
 }
