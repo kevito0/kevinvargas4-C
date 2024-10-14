@@ -67,6 +67,7 @@ function calcular() {
 
 // Resetea todos los valores y limpia la pantalla
 function clr() {
+  
   Ahora = "";
   Antes = "";
   Operatoria = "";
